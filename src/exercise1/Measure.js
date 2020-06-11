@@ -18,48 +18,52 @@ const Measure = () => {
 
     return (
         <>
-            <figure>
-                <Metric
-                    title="Nuevos confirmados"
-                    value={round(data.Global.NewConfirmed)}
-                />
-            </figure>
-            <figure>
-                <Metric
-                    title="Total confirmados"
-                    value={round(data.Global.TotalConfirmed)}
-                />
-            </figure>
-            <figure>
-                <Metric
-                    title="Nuevos fallecidos"
-                    value={round(data.Global.NewDeaths)}
-                    variant="negative"
-                />
-            </figure>
-            <figure>
-                <Metric
-                    title="Total fallecidos"
-                    value={round(data.Global.TotalDeaths)}
-                    variant="negative"
-                />
-            </figure>
-            <figure>
-                <Metric
-                    title="Nuevos recuperados"
-                    value={round(data.Global.NewRecovered)}
-                    variant="positive"
-                />
-            </figure>
-            <figure>
-                <Metric
-                    title="Total recuperados"
-                    value={round(data.Global.TotalRecovered)}
-                    variant="positive"
-                />
-            </figure>
+            <div className="left-measure">
+                <figure>
+                    <Metric
+                        title="Nuevos confirmados"
+                        value={round(data.Global.NewConfirmed)}
+                    />
+                </figure>
 
+                <figure>
+                    <Metric
+                        title="Nuevos fallecidos"
+                        value={round(data.Global.NewDeaths)}
+                        variant="negative"
+                    />
+                </figure>
 
+                <figure>
+                    <Metric
+                        title="Nuevos recuperados"
+                        value={round(data.Global.NewRecovered)}
+                        variant="positive"
+                    />
+                </figure>
+            </div>
+            <div className="right-measure">
+                <figure>
+                    <Metric
+                        title="Total confirmados"
+                        value={round(data.Global.TotalConfirmed)}
+                    />
+                </figure>
+                <figure>
+                    <Metric
+                        title="Total fallecidos"
+                        value={round(data.Global.TotalDeaths)}
+                        variant="negative"
+                    />
+                </figure>
+                <figure>
+                    <Metric
+                        title="Total recuperados"
+                        value={round(data.Global.TotalRecovered)}
+                        variant="positive"
+                    />
+                </figure>
+            </div>
         </>)
 
 }
