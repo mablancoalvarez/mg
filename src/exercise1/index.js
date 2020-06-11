@@ -18,7 +18,8 @@ export default () =>
                 title={<>Datos globales del Covid-19</>}
             />
             <PanelContent variant="fullwidth">
-                <Measure />
+                <Measure data={data}
+                 />
             </PanelContent>
         </Panel>
     </>

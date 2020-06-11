@@ -14,7 +14,7 @@ function round(number) {
     return result;
 }
 
-const Measure = () => {
+const Measure = (props) => {
 
     return (
         <>
@@ -22,14 +22,14 @@ const Measure = () => {
                 <figure>
                     <Metric
                         title="Nuevos confirmados"
-                        value={round(data.Global.NewConfirmed)}
+                        value={round(props.data.Global.NewConfirmed)}
                     />
                 </figure>
 
                 <figure>
                     <Metric
                         title="Nuevos fallecidos"
-                        value={round(data.Global.NewDeaths)}
+                        value={round(props.data.Global.NewDeaths)}
                         variant="negative"
                     />
                 </figure>
@@ -46,20 +46,20 @@ const Measure = () => {
                 <figure>
                     <Metric
                         title="Total confirmados"
-                        value={round(data.Global.TotalConfirmed)}
+                        value={round(props.data.Global.TotalConfirmed)}
                     />
                 </figure>
                 <figure>
                     <Metric
                         title="Total fallecidos"
-                        value={round(data.Global.TotalDeaths)}
+                        value={round(props.data.Global.TotalDeaths)}
                         variant="negative"
                     />
                 </figure>
                 <figure>
                     <Metric
                         title="Total recuperados"
-                        value={round(data.Global.TotalRecovered)}
+                        value={round(props.data.Global.TotalRecovered)}
                         variant="positive"
                     />
                 </figure>
