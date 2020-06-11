@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from './logo.svg'
-import './App.css'
+import './stylesheets/App.scss'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 import Exercise1 from "./exercise1"
 import Exercise2 from "./exercise2"

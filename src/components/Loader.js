@@ -3,7 +3,6 @@ import HeaderPanel from './HeaderPanel';
 import { Panel, PanelHeader, PanelContent, Metric, Spinner } from "@marketgoo/ola"
 
 const Loader = () => {
-
   return (
     <>
       <header>
@@ -12,16 +11,16 @@ const Loader = () => {
       <Panel>
         <HeaderPanel />
         <PanelContent variant="fullwidth">
-          <figure>
+          <div className="loader">
+          
             <Spinner
-              className={null}
+             
               size="big"
             />
-          </figure>
+          
+          </div>
         </PanelContent>
       </Panel>
-
-
     </>)
 }
 

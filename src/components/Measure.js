@@ -1,6 +1,6 @@
 import React from 'react';
-import data from "../data/covid19.json"
-import { Metric } from "@marketgoo/ola";
+import { Metric} from "@marketgoo/ola";
+
 
 function round(number) {
     let result;
@@ -15,17 +15,20 @@ function round(number) {
 }
 
 const Measure = (props) => {
-
+    console.log(props)
     return (
         <>
+      
+  
             <div className="left-measure">
+            
                 <figure>
                     <Metric
                         title="Nuevos confirmados"
                         value={round(props.data.Global.NewConfirmed)}
                     />
                 </figure>
-
+            
                 <figure>
                     <Metric
                         title="Nuevos fallecidos"
@@ -37,11 +40,12 @@ const Measure = (props) => {
                 <figure>
                     <Metric
                         title="Nuevos recuperados"
-                        value={round(data.Global.NewRecovered)}
+                        value={round(props.data.Global.NewRecovered)}
                         variant="positive"
                     />
                 </figure>
             </div>
+           
             <div className="right-measure">
                 <figure>
                     <Metric
@@ -64,6 +68,7 @@ const Measure = (props) => {
                     />
                 </figure>
             </div>
+          
         </>)
 
 }

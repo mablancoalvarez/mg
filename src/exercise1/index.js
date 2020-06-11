@@ -7,7 +7,6 @@ import HeaderPanel from '../components/HeaderPanel';
 
 
 export default () =>
-
     <>
         <header>
             <h1 className="ola-title">Exercise 1</h1>

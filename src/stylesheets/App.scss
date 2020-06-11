@@ -1,7 +1,12 @@
 body{
     background-color: rgb(245, 245, 245);
 }
+ .loader{
+  display: flex;
+  align-items: center;
+  margin: auto;
 
+}
 .App {
     min-height: 100vh;
     display: flex;
@@ -11,9 +16,12 @@ body{
     font-size: calc(10px + 2vmin);
   }
 .ola_panel-content{
+
   display:flex;
   
 }
+
+
 .App-logo {
   height: 20vmin;
   pointer-events: none;

@@ -5,6 +5,7 @@ import Measure from '../components/Measure';
 import HeaderPanel from '../components/HeaderPanel';
 import Loader from '../components/Loader';
 import ErrorMessage from '../components/ErrorMessage';
+import MeasureCountries from '../components/MeasureCountries';
 
 
 class Exercise2 extends React.Component {
@@ -19,13 +20,13 @@ class Exercise2 extends React.Component {
     componentDidMount() {
         fetchData()
             .then(data => {
-                setTimeout(() => {
+               
                     this.setState({
                         data: data,
                         inProgress: false,
                         sucess: true
                     })
-                }, 1000)
+             
 
             })
             .catch(error =>{ console.log(error)
@@ -47,13 +48,17 @@ class Exercise2 extends React.Component {
                     <header>
                         <h1 className="ola-title">Exercise 2</h1>
                     </header>
+
+                    
                     <Panel>
+                        
                         <HeaderPanel />
+
                         <PanelContent variant="fullwidth">
                             <Measure data={this.state.data}/>
-                        </PanelContent>
+                        </PanelContent >
                     </Panel>
-
+                    <MeasureCountries data={this.state.data}/>
                 </>
             )
         }
