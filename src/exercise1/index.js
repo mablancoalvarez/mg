@@ -13,8 +13,8 @@ export default () =>
         </header>
         <Panel>
             <HeaderPanel />
-            <PanelContent variant="fullwidth">
-                <Measure data={data}
+            <PanelContent className="ola_panel-content grid">
+                <Measure data={data.Global}
                  />
             </PanelContent>
         </Panel>

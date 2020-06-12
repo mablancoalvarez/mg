@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderPanel from './HeaderPanel';
-import { Panel, PanelHeader, PanelContent, Metric, Spinner } from "@marketgoo/ola"
+import { Panel, PanelContent, Spinner } from "@marketgoo/ola"
 
 const Loader = () => {
   return (
@@ -14,7 +14,6 @@ const Loader = () => {
           <div className="loader">
           
             <Spinner
-             
               size="big"
             />
           

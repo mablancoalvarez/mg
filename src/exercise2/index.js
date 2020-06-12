@@ -1,5 +1,5 @@
 import React from 'react'
-import { Panel, PanelHeader, PanelContent, Metric, Spinner } from "@marketgoo/ola"
+import { Panel, PanelContent} from "@marketgoo/ola"
 import fetchData from '../services/FetchData';
 import Measure from '../components/Measure';
 import HeaderPanel from '../components/HeaderPanel';
@@ -14,21 +14,28 @@ class Exercise2 extends React.Component {
         this.state = {
             data: {},
             sucess: false,
+            dataCountry:{},
             inProgress: true
         }
+       
+    }
+
+    switchCountry = (e) => {
+        let index = e.target.value;
+        this.setState({dataCountry : this.state.data.Countries[index]});
     }
     componentDidMount() {
         fetchData()
             .then(data => {
-               
                     this.setState({
                         data: data,
                         inProgress: false,
-                        sucess: true
-                    })
+                        sucess: true,
+                        dataCountry : data.Countries[156]})
              
-
-            })
+                    })
+                    
+             
             .catch(error =>{ console.log(error)
                 this.setState({
                 data: null,
@@ -36,8 +43,11 @@ class Exercise2 extends React.Component {
                 sucess: false
             })})
     }
-    render() {
 
+   
+
+    render() {
+    
         let result;
         if (this.state.inProgress) {
            result =(<Loader />
@@ -54,11 +64,12 @@ class Exercise2 extends React.Component {
                         
                         <HeaderPanel />
 
-                        <PanelContent variant="fullwidth">
-                            <Measure data={this.state.data}/>
+                        <PanelContent className="ola_panel-content grid">
+                            <Measure data={this.state.data.Global}/>
                         </PanelContent >
                     </Panel>
-                    <MeasureCountries data={this.state.data}/>
+                    <MeasureCountries data={this.state.dataCountry} countries= {this.state.data.Countries}
+                    switchCountry={this.switchCountry}/>
                 </>
             )
         }
