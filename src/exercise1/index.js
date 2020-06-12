@@ -4,8 +4,6 @@ import { Panel, PanelContent } from "@marketgoo/ola";
 import Measure from '../components/Measure';
 import HeaderPanel from '../components/HeaderPanel';
 
-
-
 export default () =>
     <>
         <header>
@@ -14,8 +12,7 @@ export default () =>
         <Panel>
             <HeaderPanel />
             <PanelContent className="ola_panel-content grid">
-                <Measure data={data.Global}
-                 />
+                <Measure data={data.Global}/>
             </PanelContent>
         </Panel>
     </>

@@ -7,22 +7,16 @@ function getCountryNames(props) {
     let result = props.countries.map((element, index) => {
         return { label: element.Country, value: index }
     });
-    
     return result;
 }
 
 class MeasureCountries extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+  
     switchCountry = (e) => {
         this.props.switchCountry(e)
-       
     }
-
     render() {
         const { data } = this.props;
-        console.log(this.props)
         return (
             <>
                 <Panel>
@@ -36,8 +30,7 @@ class MeasureCountries extends React.Component {
                         />
                     </figure>
                     <PanelContent className="ola_panel-content grid">
-
-                       <Measure data={data}/>
+                    <Measure data={data}/>
                     </PanelContent>
                 </Panel>
             </>)

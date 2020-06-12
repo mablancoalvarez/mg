@@ -12,11 +12,9 @@ const Loader = () => {
         <HeaderPanel />
         <PanelContent variant="fullwidth">
           <div className="loader">
-          
             <Spinner
               size="big"
             />
-          
           </div>
         </PanelContent>
       </Panel>

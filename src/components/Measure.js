@@ -7,21 +7,16 @@ function round(number) {
     if (number > 1000000) {
         result = (number / 1000000).toFixed(2) + ' M'
     }
-    
     else if (number > 1000){
         result = (number / 1000).toFixed(2) + ' k'
     }
     else {
         result = number.toString();
     }
-
     return result;
 }
 
 class Measure extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
     const { data } = this.props;

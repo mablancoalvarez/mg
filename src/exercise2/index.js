@@ -16,8 +16,7 @@ class Exercise2 extends React.Component {
             sucess: false,
             dataCountry:{},
             inProgress: true
-        }
-       
+        } 
     }
 
     switchCountry = (e) => {
@@ -32,11 +31,10 @@ class Exercise2 extends React.Component {
                         inProgress: false,
                         sucess: true,
                         dataCountry : data.Countries[156]})
-             
                     })
                     
              
-            .catch(error =>{ console.log(error)
+            .catch(error =>{
                 this.setState({
                 data: null,
                 inProgress: false,
@@ -44,10 +42,7 @@ class Exercise2 extends React.Component {
             })})
     }
 
-   
-
     render() {
-    
         let result;
         if (this.state.inProgress) {
            result =(<Loader />
@@ -58,12 +53,8 @@ class Exercise2 extends React.Component {
                     <header>
                         <h1 className="ola-title">Exercise 2</h1>
                     </header>
-
-                    
                     <Panel>
-                        
                         <HeaderPanel />
-
                         <PanelContent className="ola_panel-content grid">
                             <Measure data={this.state.data.Global}/>
                         </PanelContent >
@@ -81,6 +72,5 @@ class Exercise2 extends React.Component {
         return result;
     }
 }
-
 
 export default Exercise2;
